@@ -23,7 +23,7 @@ public class Palindrome {
         String renverser = "";
         
         Scanner rt = new Scanner(System.in);
-        System.out.println("Veuillez entrez le mot a verifier s'il sagit d'un palindrome:");
+        System.out.println("Veuillez entrer le mot à vérifier");
         String mot = rt.nextLine();
         for(i=mot.length()-1;i>=0;i--){
             
