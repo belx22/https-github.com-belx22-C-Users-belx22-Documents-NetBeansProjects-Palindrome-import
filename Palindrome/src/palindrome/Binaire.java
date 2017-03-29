@@ -15,10 +15,10 @@ public class Binaire {
      public static void main(String[] args) {
         int tab[]= new int[30];
          Scanner tj = new Scanner(System.in);    
-        System.out.println("Entrer le nombre a convertir en Binaire :");
+        System.out.println("Entrer le nombre à convertir en Binaire :");
      int  nbre = tj.nextInt();
         int i=0,k;
-        System.out.print(nbre+" En binaire est :");
+        System.out.print("Le nombre"+nbre+" En binaire est :");
          do{
              tab[i] = nbre%2;
              
