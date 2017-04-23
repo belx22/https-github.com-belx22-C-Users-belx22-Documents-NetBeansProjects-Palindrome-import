@@ -25,6 +25,7 @@ String fsexe;
 
     public NotesUES(String para1,String para2,String nom,String prenom , String matricule,String taille,String etablissement,String sexe ){
         initComponents();
+        //recuperatin de valeur de lapage precedante
       x =para1;
       fsexe= sexe;
       fnom=nom;
@@ -217,31 +218,28 @@ String fsexe;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      int credit1,credit2;
-     double note1,note2,notef,a,b,c,d;
-        note1=Double.parseDouble(jTextField2.getText());
-       credit1 = Integer.parseInt(jTextField5.getText());
-       
-        note2=Double.parseDouble(jTextField6.getText());
-        credit2=Integer.parseInt(jTextField4.getText());
-        a=note1*credit1;
-        b=note2*credit2;
-        c= credit1+credit2;
-        d=(a + b);
-   notef= d/c ;
-      
+     double note1,note2;
+        note1=Double.parseDouble(jTextField5.getText());
+       credit1 = Integer.parseInt(jTextField2.getText());  
+        note2=Double.parseDouble(jTextField6.getText());//recuperation de valeurs des parametre deu formulaire
+        credit2=Integer.parseInt(jTextField4.getText()); 
+          /*fonction permetant d'envoyer des parametre a une autre fenetre
+     et a l'ouvrir
+     */ 
      String msg1 = x;
      String msg2 = fnom;
-     String msg3=fprenom;
+     String msg3=fprenom;           //recuperation des valeurs de la fenetre precedante
      String msg4=fmatricule;
      String msg = y;
-     double msg6 = notef;
      String msg7= fsexe;
-     new Recap(msg1,msg2,msg3,msg4,msg,msg6,msg7).setVisible(true);
+     new Recap(msg1,msg2,msg3,msg4,msg,msg7,note1,note2,credit1,credit2).setVisible(true); 
+   
      this.hide();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       jTextField1.setText("");
+     //pour reinitialiser les valeur saisie par l'utilisateur
+        jTextField1.setText("");
        jTextField2.setText("");
        jTextField3.setText("");
        jTextField4.setText("");

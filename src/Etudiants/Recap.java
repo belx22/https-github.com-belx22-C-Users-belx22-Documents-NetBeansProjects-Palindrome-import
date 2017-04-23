@@ -18,12 +18,12 @@ String f;
     public Recap() {
         initComponents();
     }
-public Recap(String para1,String nom,String prenom,String matricule,String para2,double notefinale,String sexe){
-    
-    
+public Recap(String para1,String nom,String prenom,String matricule,String para2,String sexe,double fnote1,double fnote2,int fcredit1,int fcredit2){
     initComponents();
-    
-    jLabel13.setText(Double.toString(notefinale)); 
+  float moy;
+         moy=(float) ((fcredit1*fnote1+fcredit2*fnote2)/(fcredit1+fcredit2));
+  
+  jLabel13.setText(""+moy);
     jLabel9.setText("   "+nom+"  "+prenom);
     jLabel11.setText("           "+matricule);
     jLabel12.setText(para1+" et   "+para2);
@@ -82,18 +82,23 @@ public Recap(String para1,String nom,String prenom,String matricule,String para2
         jLabel8.setText("a une moyenne de");
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 204));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 204));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 204));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 204));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N

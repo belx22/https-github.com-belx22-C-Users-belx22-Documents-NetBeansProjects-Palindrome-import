@@ -16,7 +16,7 @@ public class FenetreEtudiant extends javax.swing.JFrame {
      */
     public FenetreEtudiant() {
         initComponents();
-        
+        //pour creer un groupe de boutton
         buttonGroup.add(jRadioButton1);
         buttonGroup.add(jRadioButton2);
         
@@ -207,7 +207,7 @@ public class FenetreEtudiant extends javax.swing.JFrame {
         sexe="Masculin";
         
     }else sexe="Féminin";
-   
+                    //recuperation du contenu du formulaire
         String msg1=jTextField5.getText();
      String msg2=jTextField3.getText();
      String nom=jnom.getText();
@@ -218,13 +218,15 @@ public class FenetreEtudiant extends javax.swing.JFrame {
      
      
     
-     new NotesUES(msg1,msg2,nom,prenom,matricule,taille,etablissement,sexe).setVisible(true);  
+     new NotesUES(msg1,msg2,nom,prenom,matricule,taille,etablissement,sexe).setVisible(true);  /*fonction permetant d'envoyer des parametre a une autre fenetre
+     et a l'ouvrir
+     */ 
     
-     this.hide();
+     this.hide();//masque la fenetre precedante
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-           
+             //pour reinitialiser les valeur saisie par l'utilisateur
         jTextField3.setText("");
           jTextField5.setText("");
           jnom.setText("");
